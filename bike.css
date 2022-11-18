@@ -1,0 +1,251 @@
+
+.border {
+    position: absolute;
+    border-left: 30px double #000000;
+    margin-left: 70px;
+    height: 937px;
+
+}
+
+.header {
+    position: absolute;
+    height: 120px;
+    width: 550px;
+    background: #000;
+    margin: -2px 0 0 700px;
+    border-radius: 0 0 50px 50px;
+    border-bottom: 10px solid #5d9803;
+}
+
+.cat2 {
+    position: absolute;
+    margin: 10px 0 0 440px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid #5d9803;
+}
+
+.messageCat2 {
+    position: absolute;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 30px;
+    margin-left: 50px;
+    font-family: "Microsoft JhengHei UI Light";
+}
+
+.bike {
+    position: absolute;
+    margin: 99px 0 0 720px;
+    width: 1200px;
+
+}
+
+.heading {
+    position: absolute;
+    background: #5d9803;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-family: Bahnschrift;
+    font-size: 50px;
+    margin: 100px 150px;
+}
+
+.about {
+    position: absolute;
+    font-family: Bahnschrift;
+    padding: 10px;
+    border-left: 5px solid #5d9803;
+    margin: 190px 130px;
+    width: 1200px;
+}
+
+.basement {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.27);
+    width: 400px;
+    height: 90px;
+    margin: 12px 15px;
+}
+
+.basementWW {
+    position: absolute;
+    background: rgba(98, 98, 98, 0.27);
+    width: 1900px;
+    height: 30px;
+    margin: 905px 0 0 -5px;
+}
+
+.list{
+    position: absolute;
+    color: #fff;
+    background: #5d9803;
+    padding: 20px;
+    width: 300px;
+    margin: 300px 0 0 150px;
+    font-size: 25px;
+    font-family: Bahnschrift;
+    border-radius: 10%;
+}
+
+.plus{
+    position: absolute;
+    padding: 20px;
+    width: 500px;
+    margin: 517px 0 0 130px;
+    font-size: 17px;
+    font-family: Bahnschrift;
+    border-left: 5px solid #5d9803;
+
+}
+
+.minus {
+    position: absolute;
+    padding: 20px;
+    width: 500px;
+    margin: 656px 0 0 130px;
+    font-size: 17px;
+    font-family: Bahnschrift;
+    border-left: 5px solid #5d9803;
+
+}
+
+.menu {
+    position: absolute;
+    background: #000;
+    width: 400px;
+    height: 100px;
+    margin: 837px 0 0 100px;
+    border-radius: 0 20px 0 0;
+}
+
+.home {
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s linear;
+
+}
+@keyframes swing {
+    25% {
+        transform: translateX(15px);
+    }
+    50% {
+        transform: translateX(-15px);
+    }
+    75% {
+        transform: translateX(7px);
+    }
+    81% {
+        transform: translateX(-7px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.home:hover {
+    animation: swing 0.5s;
+}
+
+.compass {
+    margin: 10px 0 0 20px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    border-radius: 100%;
+}
+
+.compass:hover {
+    background: #ffffff;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border:none;
+    border-radius: 40%;
+    border-top: 5px solid #fd0000;
+    border-bottom: 5px solid #0500fd;
+}
+
+.next {
+    position: absolute;
+    color: #5d9703;
+    font-size: 30px;
+    font-family: "Microsoft JhengHei UI Light";
+    border-radius: 10%;
+    padding: 15px 25px;
+    border: 1px solid #5d9703;
+    margin: 15px 0 0 40px;
+    transition: 0.5s;
+
+
+}
+
+.next:hover {
+    color: #ffffff;
+    background: #5d9703;
+
+}
+
+/* Стили для подложки */
+
+.overlay {
+
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 151, 3, 0.23);
+    z-index: 20;
+    transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+
+    /* Скрываем окна  */
+    opacity: 0;
+    visibility: hidden;
+
+
+    /*  Установаем ширину окна  */
+    width: 100%;
+    max-width: 400px;
+
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30; /* Должен быть выше чем у подложки*/
+
+    /*  Побочные стили   */
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: 5px solid #5d9703;
+    background-color: rgba(0, 0, 0, 0.67);
+    transition: 0.3s all;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*background: #ee7b1b;*/
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
